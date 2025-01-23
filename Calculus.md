@@ -384,13 +384,13 @@ This is known as the Maclaurin series.
 18. $\quad \tanh x = x - \frac{x^3}{3} + \frac{2x^5}{15} - \ldots \quad \left[ -\frac{\pi}{2} < x < \frac{\pi}{2} \right]$
 
 19. $$
-    \quad \tan^{-1} x =
-        \begin{cases}
-        x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \ldots & \text{for } -1 < x < 1 \\
-        \frac{\pi}{2} - \frac{1}{x} + \frac{1}{3x^3} - \frac{1}{5x^5} + \ldots & \text{for } x \geq 1 \\
-        -\frac{\pi}{2} + \frac{1}{x} - \frac{1}{3x^3} + \frac{1}{5x^5} - \ldots & \text{for } x < -1 \\
-        \end{cases}
-        \quad \left[-1 < x < 1\right]
+        \quad \tan^{-1} x =
+            \begin{cases}
+            x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \ldots & \text{for } -1 < x < 1 \\
+            \frac{\pi}{2} - \frac{1}{x} + \frac{1}{3x^3} - \frac{1}{5x^5} + \ldots & \text{for } x \geq 1 \\
+            -\frac{\pi}{2} + \frac{1}{x} - \frac{1}{3x^3} + \frac{1}{5x^5} - \ldots & \text{for } x < -1 \\
+            \end{cases}
+            \quad \left[-1 < x < 1\right]
     $$
 
 20. $\quad \cot x = \frac{1}{x} - \frac{x}{3} - \frac{x^3}{45} + \ldots \quad \left[0 < x < \pi\right]$

@@ -347,7 +347,7 @@ $$
 
 This is known as the Maclaurin series.
 
-### Some Standard Series Expansions
+### Standard Expansions
 
 1. $(1 - x)^{-1} = 1 + x + x^2 + x^3 + \cdots \quad \text{for } |x| < 1$
 
@@ -986,3 +986,302 @@ Let's visualize partial derivatives with a simple 3D surface. Suppose we have a 
 - **Slice Parallel to $xz$-Plane**: Fix $y = y_0$. The curve is $z = f(x, y_0)$. The slope of this curve at $x = x_0$ is $f_x(x_0, y_0)$.
 
 In summary, partial derivatives help us understand how functions of multiple variables change with respect to each variable independently. They are the cornerstone of multivariable calculus.
+
+## INTEGRATION
+
+### Indefinite Integrals
+
+If $f(x)$ and $g(x)$ are two functions of $x$ such that $g'(x) = f(x)$, then the integral of $f(x)$ is $g(x)$. Further, $g(x)$ is called the antiderivative of $f(x)$.
+
+The process of computing an integral of a function is called Integration and the function to be integrated is called integrand.
+
+An integral of a function is not unique. If $g(x)$ is any one integral of $f(x)$, then $g(x) + C$ is also its integral, where $C$ is any constant termed as constant of integration.
+
+#### Standard Formulae
+
+1.
+
+$$
+\int x^n \, dx = \frac{x^{n+1}}{n+1} + c \quad (n \ne -1)
+$$
+
+2.
+
+$$
+\int (ax + b)^n \, dx = \frac{(ax + b)^{n+1}}{(n+1)a} + c \quad (n \ne -1)
+$$
+
+3.
+
+$$
+\int \frac{1}{x} \, dx = \log x + c
+$$
+
+4.
+
+$$
+\int \frac{1}{ax + b} \, dx = \frac{\log (ax + b)}{a} + c
+$$
+
+5.
+
+$$
+\int a^x \, dx = \frac{a^x}{\log a} + c
+$$
+
+6.
+
+$$
+\int e^x \, dx = e^x + c
+$$
+
+7.
+
+$$
+\int \sin x \, dx = -\cos x + c
+$$
+
+8.
+
+$$
+\int \cos x \, dx = \sin x + c
+$$
+
+9.
+
+$$
+\int e^{ax} \, dx = \frac{e^{ax}}{a} + c
+$$
+
+10.
+
+$$
+\int \sec^2 x \, dx = \tan x + c
+$$
+
+11.
+
+$$
+\int \csc^2 x \, dx = -\cot x + c
+$$
+
+12.
+
+$$
+\int \sec x \tan x \, dx = \sec x + c
+$$
+
+13.
+
+$$
+\int \csc x \cot x \, dx = -\csc x + c
+$$
+
+14.
+
+$$
+\int \tan x \, dx = \log (\sec x) + c
+$$
+
+15.
+
+$$
+\int \cot x \, dx = \log (\sin x) + c
+$$
+
+16.
+
+$$
+\int \sec x \, dx = \log (\sec x + \tan x) + c
+$$
+
+17.
+
+$$
+\int \csc x \, dx = \log (\csc x + \cot x) + c
+$$
+
+18.
+
+$$
+\int \frac{1}{1-x^2} \, dx = \sin^{-1} x + c \quad \text{or} \quad -\cos^{-1} x + c
+$$
+
+19.
+
+$$
+\int \frac{1}{1+x^2} \, dx = \tan^{-1} x + c \quad \text{or} \quad -\cot^{-1} x + c
+$$
+
+20.
+
+$$
+\int \frac{1}{\sqrt{1-x^2}} \, dx = \sec^{-1} x + c \quad \text{or} \quad -\csc^{-1} x + c
+$$
+
+21.
+
+$$
+\int \sinh x \, dx = \cosh x + c
+$$
+
+22.
+
+$$
+\int \cosh x \, dx = \sinh x + c
+$$
+
+23.
+
+$$
+\int \tanh x \, dx = \log (\cosh x) + c
+$$
+
+24.
+
+$$
+\int \coth x \, dx = \log (\sinh x) + c
+$$
+
+25.
+
+$$
+\int \text{sech} x \, dx = \tan^{-1} (\sinh x) + c
+$$
+
+26.
+
+$$
+\int \text{csch} x \, dx = \log (\tanh (\frac{x}{2})) + c
+$$
+
+27.
+
+$$
+\int f(g(x))g'(x) \, dx = \int f(u) \, du = F(g(x)) + c
+$$
+
+28.
+
+$$
+\int \frac{f'(x)}{f(x)} \, dx = \log |f(x)| + c
+$$
+
+29.
+
+$$
+\int \frac{f'(x)}{[f(x)]^n} \, dx = \frac{[f(x)]^{1-n}}{1-n} + c
+$$
+
+30.
+
+$$
+\int \frac{dx}{\sqrt{a^2 - x^2}} = \sin^{-1} \frac{x}{a} + c
+$$
+
+31.
+
+$$
+\int \frac{dx}{\sqrt{a^2 + x^2}} = \sinh^{-1} \frac{x}{a} + c \quad \text{or} \quad \log \left| x + \sqrt{a^2 + x^2} \right| + c
+$$
+
+32.
+
+$$
+\int \frac{dx}{\sqrt{x^2 - a^2}} = \cosh^{-1} \frac{x}{a} + c \quad \text{or} \quad \log \left| x + \sqrt{x^2 + a^2} \right| + c
+$$
+
+33.
+
+$$
+\int \frac{1}{x^2 + a^2} dx = \frac{1}{a} \tan^{-1} \left( \frac{x}{a} \right) + c
+$$
+
+34.
+
+$$
+\int \frac{1}{x^2 - a^2} dx = \frac{1}{2a} \log \left| \frac{x - a}{x + a} \right| + c
+$$
+
+35.
+
+$$
+\int \frac{1}{a^2 - x^2} dx = \frac{1}{2a} \log \left| \frac{a + x}{a - x} \right| + c
+$$
+
+36.
+
+$$
+\int \sqrt{a^2 - x^2} dx = \frac{x \sqrt{a^2 + x^2}}{2} + \frac{a^2}{2} \sin^{-1} \frac{x}{a} + c
+$$
+
+37.
+
+$$
+\int \sqrt{a^2 + x^2} dx = \frac{x \sqrt{a^2 + x^2}}{2} + \frac{a^2}{2} \sinh^{-1} \frac{x}{a} + c
+$$
+
+38.
+
+$$
+\int \sqrt{x^2 - a^2} dx = \frac{x \sqrt{x^2 - a^2}}{2} - \frac{a^2}{2} \cosh^{-1} \frac{x}{a} + c
+$$
+
+39.
+
+$$
+\int \log x \, dx = x (\log x - 1) = x \log \left( \frac{x}{e} \right) + c
+$$
+
+40.
+
+$$
+\int e^x [f(x) + f'(x)] dx = e^x f(x) + c
+$$
+
+### Definite Integrals
+
+The difference in the values of an integral of a function $f(x)$ for two assigned values say $a, b$ of the independent variable $x$, is called the Definite Integral of $f(x)$ over the interval $[a, b]$ and is denoted by $\int_{a}^{b} f(x)dx$.
+
+The number ‘$a$’ is called the lower limit and the number ‘$b$’ is the upper limit of integration.
+
+If $f(x)$ is a function of $x$ continuous in $[a, b]$, then
+
+$$
+ \int_{a}^{b} f(x)dx = g(b) - g(a)
+$$
+
+where $g(x)$ is a function such that
+
+$$
+ \frac{d}{dx} g(x) = f(x).
+$$
+
+#### Properties
+
+1. If $f(x)$ is a continuous function of $x$ over $[a, b]$, and $c$ belongs to $[a, b]$, then <br>
+   $\int_{a}^{b} f(x)dx = \int_{a}^{c} f(x)dx + \int_{c}^{b} f(x)dx.$
+
+2. If $f(x)$ is a continuous function of $x$ over $[a, b]$, then<br>
+   $\int_{a}^{b} Kf(x)dx = K \int_{a}^{b} f(x)dx.$
+
+3. If $f(x)$ is a continuous function of $x$ over $[a, b]$, then<br>
+   $\int_a^b f(x)dx = -\int_b^a f(x)dx.$
+
+4. If $f(x)$ is continuous in some neighbourhood of $a$, then<br>
+   $\int_a^a f(x)dx = 0.$
+
+5. If $f(x)$ and $g(x)$ are continuous in $[a, b]$, then<br>
+   $\int_a^b [f(x) + g(x)]dx = \int_a^b f(x)dx + \int_a^b g(x)dx.$
+
+6. $\int_a^b f(x)dx = \int_a^b f(z)dz = \int_a^b f(t)dt.$
+
+7. $\int_0^a f(x)dx = \int_0^a f(a - x)dx.$
+
+8. $\int_{-a}^a f(x)dx = 0, \text{ if } f(x) \text{ is odd}.$
+
+9. $\int_{-a}^a f(x)dx = 2 \int_0^a f(x)dx \text{ if } f(x) \text{ is even}.$
+
+10. $\int_0^{2a} f(x)dx = 2 \int_0^a f(x)dx, \text{ if } f(2a - x) = f(x) = 0 \text{ if } f(2a - x) = -f(x)$
+
+11. $\int_0^{na} f(x)dx = n \int_0^a f(x)dx, \text{ if } f(a + x) = f(x)$

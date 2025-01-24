@@ -1,8 +1,8 @@
 # CALCULUS
 
-## Function:
+## Function
 
-### Function of single variable:
+### Function of single variable
 
 A real valued function $y = f(x)$ of a real variable x is a mapping whose domain $S$ and codomain $R$ are sets of real numbers. The range of the function is the set ${y = f(x) : x \in R}$ which is a subset of $R$.
 
@@ -14,7 +14,7 @@ Given an element $x \in X$, there is a unique element $y$ in $Y$ that is related
 
 The set of all values of $f(x)$ taken together is called the range of $f$ or the image of $X$ under $f$. Symbolically:
 
-range of $f = \{y \in Y | y = f(x)$, for some $x ∈ X\}$
+range of $f = \{y \in Y | y = f(x) \text{ for some } x ∈ X\}$
 
 | Function      | Domain         | Range               |
 | ------------- | -------------- | ------------------- |
@@ -25,7 +25,7 @@ range of $f = \{y \in Y | y = f(x)$, for some $x ∈ X\}$
 | $y = 1/x$     | $\{x: x ≠ 0\}$ | $\{y: y ≠ 0\}$      |
 | $y = log₂ x$  | $\{x: x > 0\}$ | $\mathbb{R}$        |
 
-### Domain and Range (Types of Functions)
+### Types of Functions
 
 1. **One-One (Injective) Function**<br>
    A function $f : X \rightarrow Y$ is defined to be one-one (or injective) if the images of distinct elements of $X$ under $f$ are distinct, i.e., for any $x1, x2 \in X$, if $f(x1) = f(x2)$, then it implies that $x1 = x2$.
@@ -40,7 +40,7 @@ range of $f = \{y \in Y | y = f(x)$, for some $x ∈ X\}$
 
 - <u>**Explicit Functions**</u> <br>
   Explicit functions are functions where the dependent variable (usually denoted as $y$) is expressed explicitly in terms of the independent variable (usually denoted as $x$), such as $y = f(x)$. <br>
-  _**Example**_ :$y = f(x) = 2x + 3$
+  _**Example**_ : $y = f(x) = 2x + 3$
 
 - <u>**Implicit Functions**</u> <br>
   Implicit functions are functions where the relationship between the dependent and independent variables is defined implicitly, often by an equation involving both variables, like $x^2 + y^2 = 1$.
@@ -103,9 +103,11 @@ range of $f = \{y \in Y | y = f(x)$, for some $x ∈ X\}$
 ### Composition of Functions
 
 - Let $f : A \rightarrow B$ and $g : B \rightarrow C$ be two functions. Then, the composition of $f$ and $g$, denoted by $g \circ f$, is defined as the function $g \circ f : A \rightarrow C$ given by
+
   $$
   (g \circ f)(x) = g(f(x))\text{, for all }x \in A
   $$
+
 - If $f : A \rightarrow B$ and $g : B \rightarrow C$ are one-one, then $g \circ f : A \rightarrow C$ is also one-one.
 - If $f : A \rightarrow B$ and $g : B \rightarrow C$ are onto, then $g \circ f : A \rightarrow C$ is also onto.
 - Let $f : A \rightarrow B$ and $g : B \rightarrow C$ be the given functions such that $g \circ f$ is one-one. Then $f$ is one-one.
@@ -191,7 +193,7 @@ There are several basic rules that help us evaluate limits:
    \lim_{{x \to c}} \frac{f(x)}{g(x)} = \frac{\lim_{{x \to c}} f(x)}{\lim_{{x \to c}} g(x)}, \text{ if } \lim_{{x \to c}} g(x) \neq 0
    $$
 
-### Limits of Trigonometry Functions:
+### Trigonometry Functions
 
 1. $\quad \lim_{{x \to 0}} \sin x = 0$
 
@@ -211,7 +213,7 @@ There are several basic rules that help us evaluate limits:
 
 9. $\quad \lim_{{x \to 0}} \left(\frac{1 - \cos (ax)}{x}\right) = \frac{a^2}{2}$
 
-### Limit to form $1^{\infty}$
+### 1 power infinity
 
 1. $\quad \lim_{{x \to 0}} \left(1 + x\right)^{\frac{1}{x}} = e$
 
@@ -221,7 +223,7 @@ There are several basic rules that help us evaluate limits:
 
 4. $\quad \lim_{{x \to \infty}} \left(1 + \frac{a}{x}\right)^x = e^a$
 
-### Limits of Log and Exponential Functions
+### Log and Exponential Functions
 
 1. $\quad \lim_{{x \to 0}} e^x = 1$
 
@@ -237,7 +239,7 @@ There are several basic rules that help us evaluate limits:
 
 7. $\quad \lim\_{{x \to a}} \left( \frac{a^x + b^x}{2} \right)^{\frac{1}{x}} = \sqrt{ab}$
 
-### L'Hospital's Rule:
+### L'Hospital's Rule
 
 We apply L'Hospital's Rule to the limit if we get the limit in the following forms (Indeterminate forms):
 
@@ -288,7 +290,7 @@ If $f(x)$ is a polynomial function, then $\lim_{{x \to a}} f(x) = f(a)$.
    - $\lim_{x \to a^{+}} f(x) = f(a)$
    - $\lim_{x \to b^{-}} f(x) = f(b)$
 
-### Important Points:
+**Important Points:**<br>
 
 1. If $f(x)$ and $g(x)$ are two continuous functions then $\quad f(x) + g(x),\quad f(x) − g(x),\quad f(x).g(x)$ and $\quad \frac{f(x)}{g(x)} (:: g(x) \neq 0)$ are also continuous.
 2. Polynomial function, exponential function, sine and cosine functions, and modulus function are continuous everywhere.
@@ -310,7 +312,7 @@ $$
 \lim_{h \to 0} \frac{f(a+h)−f(a)}{h}
 $$
 
-### Important Note:
+**Important Note:**<br>
 
 1. If the derivative of $f(x)$ exists at $x = a$ then the function $f(x)$ is said to be differentiable function at $x = a$.
 2. $f^l(a)$ exists at $x = a \iff Lf^l(a) = Rf^l(a)$.
@@ -499,32 +501,41 @@ $$
 
 The theorem essentially states that there is at least one point $c$ where the tangent to the curve is parallel to the secant line connecting $(a, f(a))$ and $(b, f(b))$.
 
-**Example:**
+##### Rolle's Theorem
 
-Consider the function $f(x) = x^2$ on the interval $[1, 3]$.
+Rolle's Theorem is a special case of the Mean Value Theorem. It states that if a function $f$ satisfies the following three conditions on a closed interval $[a, b]$:
 
-1. **Check conditions**:
+1. $f$ is continuous on the closed interval $[a, b]$.
+2. $f$ is differentiable on the open interval $(a, b)$.
+3. $f(a) = f(b)$.
 
-   - $f(x) = x^2$ is continuous on $[1, 3]$.
-   - $f(x) = x^2$ is differentiable on $(1, 3)$.
+Then, there exists at least one point $c$ in the open interval $(a, b)$ such that:
 
-2. **Apply the Mean Value Theorem**:
+$$
+ f'(c) = 0
+$$
 
-   $$
-   f'(x) = 2x
-   $$
+In simpler terms, if a function starts and ends at the same value on a certain interval and meets the continuity and differentiability conditions, there is at least one point in that interval where the derivative (slope of the tangent) is zero. This means the function has a horizontal tangent line at some point in the interval.
 
-   $$
-   f'(c) = \frac{f(3) - f(1)}{3 - 1} = \frac{9 - 1}{2} = 4
-   $$
+##### Lagrange's Mean Value Theorem (MVT)
 
-   Set the derivative equal to the average rate of change:
+The Mean Value Theorem (MVT) generalizes Rolle's Theorem. It states that if a function $f$ satisfies the following conditions on a closed interval $[a, b]$:
 
-   $$
-   2c = 4 \implies c = 2
-   $$
+1. $f$ is continuous on the closed interval $[a, b]$.
+2. $f$ is differentiable on the open interval $(a, b)$.
 
-So, the point $c = 2$ satisfies the Mean Value Theorem.
+Then, there exists at least one point $c$ in the open interval $(a, b)$ such that:
+
+$$
+ f'(c) = \frac{f(b) - f(a)}{b - a}
+$$
+
+This means that there is at least one point in the interval where the instantaneous rate of change (the derivative) is equal to the average rate of change over the interval. In other words, the slope of the tangent at some point is equal to the slope of the secant line connecting the endpoints $(a, f(a))$ and $(b, f(b))$.
+
+**Formulas Recap** <br>
+
+- **Rolle's Theorem:** If $f(a) = f(b)$, then $f'(c) = 0$.
+- **Lagrange's Mean Value Theorem:** $f'(c) = \frac{f(b) - f(a)}{b - a}$.
 
 #### Mean Value Theorem for Integrals
 
@@ -731,7 +742,7 @@ If $y = f(x)$ and its inverse $x = f^{-1}(y)$ is also defined, then $\frac{dy}{d
 
 - **Global Maximum/Minimum**: A point $(x_0, y_0)$ where the function reaches its highest or lowest value over its entire domain.
 
-#### Maxima and minima for functions of one variable:-
+#### Functions of one variable
 
 **Local or relative maximum** <br>
 A function $f(x)$ is said to have a Maximum at $x = c$ if there exists $\delta > 0$ such that $|x − c| <  \delta \Rightarrow f(x) \leq f(c)$.
@@ -781,7 +792,7 @@ In this case, check for maxima and minima using the changes in sign of $f(x)$ as
 2. For $x < x_0$ if $f'(x) > 0$ and $x > x_0$ if $f'(x) < 0$ then $f(x_0)$ is a maximum value of $f(x)$.
 3. For $x < x_0$ and $x > x_0$ if $f'(x) > 0$ (or) $f'(x) < 0$ then $f(x_0)$ is not an extremum.
 
-#### Maxima and minima for functions of two variables:
+#### Functions of two variables:
 
 1. **Function and Partial Derivatives**: Let $f(x, y)$ be the function. Compute the first-order partial derivatives $f_x$ and $f_y$:
 

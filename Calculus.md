@@ -413,9 +413,325 @@ This is known as the Maclaurin series.
 
 25. $\quad \ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \ldots \quad \left[-1 < x < 1\right]$
 
-## Maxima and Minima
+## DIFFERENTIAL CALCULUS
 
-### Maxima and minima for functions of one variable:-
+### Differentiation
+
+Differentiation is the process of finding the derivative of a function. The derivative represents the rate of change of the function's value with respect to a change in its input value.
+
+#### The Derivative
+
+If $f(x)$ is a function, its derivative, denoted as $f'(x)$ or $\frac{df}{dx}$, is defined as:
+
+$$
+ f'(x) = \lim_{{h \to 0}} \frac{f(x+h) - f(x)}{h}
+$$
+
+> Note: The derivative represents the slope of the tangent line to the graph of the function at a given point.
+
+#### Basic Rules of Differentiation
+
+- **Power Rule**:
+
+  $$
+  \frac{d}{dx} [x^n] = nx^{n-1}
+  $$
+
+- **Constant Rule**:
+
+  $$
+  \frac{d}{dx} [c] = 0 \text{  , where $c$ is a constant.}
+  $$
+
+- **Sum Rule**:
+
+  $$
+  \frac{d}{dx} [f(x) + g(x)] = f'(x) + g'(x)
+  $$
+
+- **Difference Rule**:
+
+  $$
+  \frac{d}{dx} [f(x) - g(x)] = f'(x) - g'(x)
+  $$
+
+- **Product Rule**:
+
+  $$
+  \frac{d}{dx} [f(x) \cdot g(x)] = f'(x) \cdot g(x) + f(x) \cdot g'(x)
+  $$
+
+- **Quotient Rule**:
+
+  $$
+  \frac{d}{dx} \left[\frac{f(x)}{g(x)}\right] = \frac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{[g(x)]^2}
+  $$
+
+- **Chain Rule**:
+  $$
+  \frac{d}{dx} [f(g(x))] = f'(g(x)) \cdot g'(x)
+  $$
+
+#### Higher-Order Derivatives
+
+- **Second Derivative**: The derivative of the derivative, denoted as $f''(x)$ or $\frac{d^2f}{dx^2}$.
+- **nth Derivative**: The derivative taken n times, denoted as $f^{(n)}(x)$ or $\frac{d^nf}{dx^n}$.
+
+**Critical Points and Inflection Points** <br>
+
+- **Critical Points**: Points where $f'(x) = 0$ or $f'(x)$ is undefined. Used to determine local maxima and minima.
+- **Inflection Points**: Points where the concavity of the function changes, identified by $f''(x) = 0$.
+
+#### Mean Value Theorem for Derivatives
+
+The Mean Value Theorem for Derivatives states that if a function $f$ is continuous on the closed interval $[a, b]$ and differentiable on the open interval $(a, b)$, then there exists at least one point $c$ in $(a, b)$ such that the instantaneous rate of change (derivative) at $c$ is equal to the average rate of change over $[a, b]$. Mathematically, it is expressed as:
+
+$$
+f'(c) = \frac{f(b) - f(a)}{b - a}
+$$
+
+**Conditions:**
+
+1. **Continuity**: $f$ must be continuous on the closed interval $[a, b]$.
+2. **Differentiability**: $f$ must be differentiable on the open interval $(a, b)$.
+
+**Interpretation:**
+
+The theorem essentially states that there is at least one point $c$ where the tangent to the curve is parallel to the secant line connecting $(a, f(a))$ and $(b, f(b))$.
+
+**Example:**
+
+Consider the function $f(x) = x^2$ on the interval $[1, 3]$.
+
+1. **Check conditions**:
+
+   - $f(x) = x^2$ is continuous on $[1, 3]$.
+   - $f(x) = x^2$ is differentiable on $(1, 3)$.
+
+2. **Apply the Mean Value Theorem**:
+
+   $$
+   f'(x) = 2x
+   $$
+
+   $$
+   f'(c) = \frac{f(3) - f(1)}{3 - 1} = \frac{9 - 1}{2} = 4
+   $$
+
+   Set the derivative equal to the average rate of change:
+
+   $$
+   2c = 4 \implies c = 2
+   $$
+
+So, the point $c = 2$ satisfies the Mean Value Theorem.
+
+#### Mean Value Theorem for Integrals
+
+The Mean Value Theorem for Integrals states that if $f$ is continuous on the closed interval $[a, b]$, then there exists at least one point $c$ in $(a, b)$ such that the value of the function at $c$ is equal to the average value of the function over $[a, b]$. Mathematically, it is expressed as:
+
+$$
+f(c) = \frac{1}{b - a} \int_a^b f(x) \, dx
+$$
+
+**Conditions:**
+
+1. **Continuity**: $f$ must be continuous on the closed interval $[a, b]$.
+
+**Interpretation:**
+
+The theorem states that there is at least one point $c$ where the function's value is equal to its average value over the interval.
+
+**Example:**
+
+Consider the function $f(x) = x^2$ on the interval $[1, 3]$.
+
+1. **Check conditions**:
+
+   - $f(x) = x^2$ is continuous on $[1, 3]$.
+
+2. **Apply the Mean Value Theorem for Integrals**:
+
+   $$
+   \frac{1}{3 - 1} \int_1^3 x^2 \, dx = \frac{1}{2} \left[ \frac{x^3}{3} \right]_1^3 = \frac{1}{2} \left( \frac{27}{3} - \frac{1}{3} \right) = \frac{1}{2} (9 - \frac{1}{3}) = \frac{1}{2} \times \frac{26}{3} = \frac{13}{3}
+   $$
+
+   So, there exists a point $c$ in $(1, 3)$ such that $f(c) = \frac{13}{3}$.
+
+- **Mean Value Theorem for Derivatives**: Guarantees that there is at least one point where the derivative (slope of the tangent) equals the average rate of change over an interval.
+- **Mean Value Theorem for Integrals**: Guarantees that there is at least one point where the function's value equals its average value over an interval.
+
+#### Implicit Differentiation
+
+Implicit differentiation is a technique used in calculus to find the derivative of a function when it is not explicitly given in the form $y = f(x)$. Instead, both variables $x$ and $y$ are given in a relation, often in the form $F(x, y) = 0$. The goal is to differentiate this relation with respect to $x$ to find $\frac{dy}{dx}$.
+
+1. **Implicit Function**: An implicit function is one where $y$ is not isolated on one side of the equation. For example, in the equation $x^2 + y^2 = 1$, $y$ is defined implicitly in terms of $x$.
+
+2. **Differentiation Process**:
+
+   - Treat $y$ as a function of $x$, even though it is not explicitly written as $y = f(x)$.
+   - Differentiate both sides of the equation with respect to $x$. Remember to apply the chain rule when differentiating terms involving $y$, because $y$ is a function of $x$.
+
+3. **Chain Rule**: The chain rule is used when differentiating a composite function. When you differentiate $y$ with respect to $x$, you get $\frac{dy}{dx}$. For example, if you differentiate $y^2$ with respect to $x$, you apply the chain rule:
+   $$
+   \frac{d}{dx}(y^2) = 2y \cdot \frac{dy}{dx}
+   $$
+
+**Example:**<br>
+
+Let's find $\frac{dy}{dx}$ for the equation $x^2 + y^2 = 1$:
+
+1. **Start with the equation**:
+
+   $$
+   x^2 + y^2 = 1
+   $$
+
+2. **Differentiate both sides with respect to $x$**:
+
+   $$
+   \frac{d}{dx}(x^2) + \frac{d}{dx}(y^2) = \frac{d}{dx}(1)
+   $$
+
+3. **Apply the differentiation**:
+
+   - The derivative of $x^2$ with respect to $x$ is $2x$.
+   - The derivative of $y^2$ with respect to $x$ is $2y \cdot \frac{dy}{dx}$ (using the chain rule).
+   - The derivative of a constant (1) with respect to $x$ is 0.
+
+   So, we get:
+
+   $$
+   2x + 2y \cdot \frac{dy}{dx} = 0
+   $$
+
+4. **Solve for $\frac{dy}{dx}$**:
+   - Isolate $\frac{dy}{dx}$ on one side of the equation:
+     $$
+     2y \cdot \frac{dy}{dx} = -2x
+     $$
+   - Divide both sides by $2y$ (assuming $y \neq 0$):
+     $$
+     \frac{dy}{dx} = -\frac{x}{y}
+     $$
+
+So, the derivative $\frac{dy}{dx}$ for the given implicit function $x^2 + y^2 = 1$ is:
+
+$$
+\frac{dy}{dx} = -\frac{x}{y}
+$$
+
+Implicit differentiation allows us to find the derivative of a variable that is defined implicitly by a relation involving another variable. By differentiating both sides of the relation with respect to $x$ and applying the chain rule, we can solve for $\frac{dy}{dx}$ even when $y$ is not isolated on one side of the equation. This technique is particularly useful in cases where it is difficult or impossible to explicitly solve for $y$ in terms of $x$.
+Used when a function is not explicitly solved for one variable.
+
+#### Logarithmic Differentiation
+
+Logarithmic differentiation is a technique used in calculus to differentiate functions that are products, quotients, or powers of other functions. This method leverages the properties of logarithms to simplify the differentiation process, especially when dealing with complex expressions.
+
+1. **Logarithm Properties**: The key properties of logarithms that make logarithmic differentiation useful are:
+
+   - $\log(ab) = \log(a) + \log(b)$
+   - $\log\left(\frac{a}{b}\right) = \log(a) - \log(b)$
+   - $\log(a^b) = b \log(a)$
+
+2. **Steps for Logarithmic Differentiation**:
+   - **Step 1**: Take the natural logarithm (\(\ln\)) of both sides of the function $y = f(x)$. This step transforms the function into a form that is easier to differentiate.
+   - **Step 2**: Use the properties of logarithms to simplify the expression.
+   - **Step 3**: Differentiate both sides of the equation with respect to $x$. Remember to apply the chain rule when differentiating the logarithm of $y$ (since $y$ is a function of $x$).
+   - **Step 4**: Solve for $\frac{dy}{dx}$ by isolating it on one side of the equation.
+
+**Example:** <br>
+
+Let's differentiate the function $y = x^x$ using logarithmic differentiation.
+
+1. **Start with the function**:
+
+   $$
+   y = x^x
+   $$
+
+2. **Take the natural logarithm of both sides**:
+
+   $$
+   \ln(y) = \ln(x^x)
+   $$
+
+3. **Simplify using logarithm properties**:
+
+   $$
+   \ln(y) = x \ln(x)
+   $$
+
+4. **Differentiate both sides with respect to $x$**:
+
+   - For the left side, use the chain rule:
+     $$
+     \frac{d}{dx}[\ln(y)] = \frac{1}{y} \cdot \frac{dy}{dx}
+     $$
+   - For the right side, apply the product rule (since $x \ln(x)$ is a product of $x$ and $\ln(x)$):
+     $$
+     \frac{d}{dx}[x \ln(x)] = \ln(x) + x \cdot \frac{1}{x} = \ln(x) + 1
+     $$
+
+   So, we get:
+
+   $$
+   \frac{1}{y} \cdot \frac{dy}{dx} = \ln(x) + 1
+   $$
+
+5. **Solve for $\frac{dy}{dx}$**:
+   - Multiply both sides by $y$:
+     $$
+     \frac{dy}{dx} = y (\ln(x) + 1)
+     $$
+   - Recall that $y = x^x$:
+     $$
+     \frac{dy}{dx} = x^x (\ln(x) + 1)
+     $$
+
+So, the derivative $\frac{dy}{dx}$ for the function $y = x^x$ is:
+
+$$
+\frac{dy}{dx} = x^x (\ln(x) + 1)
+$$
+
+Logarithmic differentiation is a powerful technique for differentiating functions that involve products, quotients, or powers. By taking the natural logarithm of the function, we can simplify the differentiation process using the properties of logarithms. This method is particularly useful for complex expressions where traditional differentiation rules would be cumbersome.
+
+#### Derivatives of Some Important Functions
+
+1.  $\frac{d}{dx} (x^n) = n \cdot x^{n-1}\quad\quad$
+    $\frac{d}{dx} \left( \frac{1}{x^n} \right) = \frac{-n}{x^{n+1}}\quad\quad$
+    $\frac{d}{dx} (\sqrt{x}) = \frac{1}{2\sqrt{x}} ;\quad x \neq 0$
+
+2.  $\frac{d}{dx} [ax^n + b] = an \cdot x^{n-1}$
+
+3.  $\frac{d}{dx} [ax + b]^n = n \cdot a (ax + b)^{n-1}$
+
+4.  $\frac{d}{dx} [e^{ax}] = a \cdot e^{ax}$
+
+5.  $\frac{d}{dx} [\log x] = \frac{1}{x} ; \quad\quad x > 0$
+
+6.  $\frac{d}{dx} [a^x] = a^x \log a; \quad\quad a > 0$
+
+7.  $\frac{d}{dx} [\sin x] = \cos x\quad\quad$
+    $\frac{d}{dx} [\cos x] = -\sin x\quad\quad$
+    $\frac{d}{dx} [\tan x] = \sec^2 x\quad\quad$ <br>
+
+    $\frac{d}{dx} [\cot x] = -\csc^2 x\quad\quad$
+    $\frac{d}{dx} [\sec x] = \sec x \cdot \tan x\quad\quad$
+    $\frac{d}{dx} [\csc x] = -\csc x \cdot \cot x\quad\quad$
+
+**Inverse Rule**
+
+If $y = f(x)$ and its inverse $x = f^{-1}(y)$ is also defined, then $\frac{dy}{dx} = \frac{1}{\frac{dx}{dy}}$
+
+### Maxima and Minima
+
+- **Local Maximum/Minimum**: A point $(x_0, y_0)$ where the function reaches its highest or lowest value in a small surrounding neighborhood.
+
+- **Global Maximum/Minimum**: A point $(x_0, y_0)$ where the function reaches its highest or lowest value over its entire domain.
+
+#### Maxima and minima for functions of one variable:-
 
 **Local or relative maximum** <br>
 A function $f(x)$ is said to have a Maximum at $x = c$ if there exists $\delta > 0$ such that $|x − c| <  \delta \Rightarrow f(x) \leq f(c)$.
@@ -445,6 +761,99 @@ The function $f(x)$ has neither maximum nor minimum at the point of inflection.
 2. $f'(a) = 0$ is only a necessary condition but not a sufficient condition for $f(a)$ to be an extreme value of $f(x)$.
 3. Every extreme point is a stationary point but every stationary point need not be an extreme point.
 
+**Rule to find maxima and minima:**<br>
+
+Let $f(x)$ be the given function
+
+**Step 1:** Find $f'(x)$
+
+**Step 2:** Equate $f'(x)$ to zero to obtain the stationary points.
+
+**Step 3:** Find $f''(x)$ at each stationary point.
+
+- If $f''(x_0) > 0$ then $f(x)$ has a minimum at $x = x_0$
+- If $f''(x_0) < 0$ then $f(x)$ has a maximum at $x = x_0$
+- If $f''(x_0) = 0$ then $f(x)$ may (or) may not have extremum.
+
+In this case, check for maxima and minima using the changes in sign of $f(x)$ as given below.
+
+1. For $x < x_0$ if $f'(x) < 0$ and $x > x_0$ if $f'(x) > 0$ then $f(x_0)$ is a minimum value of $f(x)$.
+2. For $x < x_0$ if $f'(x) > 0$ and $x > x_0$ if $f'(x) < 0$ then $f(x_0)$ is a maximum value of $f(x)$.
+3. For $x < x_0$ and $x > x_0$ if $f'(x) > 0$ (or) $f'(x) < 0$ then $f(x_0)$ is not an extremum.
+
+#### Maxima and minima for functions of two variables:
+
+1. **Function and Partial Derivatives**: Let $f(x, y)$ be the function. Compute the first-order partial derivatives $f_x$ and $f_y$:
+
+$$
+f_x = \frac{\partial f}{\partial x}, \quad f_y = \frac{\partial f}{\partial y}
+$$
+
+2. **Critical Points**: Solve the system of equations $f_x = 0$ and $f_y = 0$ to find the critical points $(x_0, y_0)$.
+
+3. **Second-Order Partial Derivatives**: Compute the second-order partial derivatives:
+
+$$
+f_{xx} = \frac{\partial^2 f}{\partial x^2}, \quad f_{yy} = \frac{\partial^2 f}{\partial y^2}, \quad f_{xy} = \frac{\partial^2 f}{\partial x \partial y}
+$$
+
+4. **Hessian Determinant**: Calculate the Hessian determinant $H$ at each critical point:
+
+$$
+H = f_{xx}(x_0, y_0) f_{yy}(x_0, y_0) - [f_{xy}(x_0, y_0)]^2
+$$
+
+5. **Classification of Critical Points**:
+   - If $H > 0$ and $f_{xx} > 0$, $(x_0, y_0)$ is a local minimum.
+   - If $H > 0$ and $f_{xx} < 0$, $(x_0, y_0)$ is a local maximum.
+   - If $H < 0$, $(x_0, y_0)$ is a saddle point (neither a maximum nor a minimum).
+   - If $H = 0$, the test is inconclusive.
+
+**Example**<br>
+Let's go through an example to illustrate these steps:
+
+Consider the function:
+
+$$
+f(x, y) = x^2 + y^2 - 4x - 6y + 13
+$$
+
+1. **First-Order Partial Derivatives**:
+
+$$
+f_x = 2x - 4, \quad f_y = 2y - 6
+$$
+
+2. **Critical Points**:
+   Set $f_x = 0$ and $f_y = 0$:
+
+$$
+2x - 4 = 0 \implies x = 2
+$$
+
+$$
+2y - 6 = 0 \implies y = 3
+$$
+
+So, the critical point is $(2, 3)$.
+
+3. **Second-Order Partial Derivatives**:
+
+$$
+f_{xx} = 2, \quad f_{yy} = 2, \quad f_{xy} = 0
+$$
+
+4. **Hessian Determinant**:
+
+$$
+H = (2)(2) - (0)^2 = 4
+$$
+
+5. **Classification**:
+   Since $H > 0$ and $f_{xx} = 2 > 0$, $(2, 3)$ is a local minimum.
+
+To verify if it's a global minimum, we need to check the behavior of the function over its entire domain, but generally speaking, quadratic functions like this tend to have their local minima as global minima.
+
 #### Absolute or Global maximum/minimum:
 
 The absolute maximum/minimum values of the function $f(x)$ in the closed interval $[a, b]$ are given by
@@ -458,36 +867,111 @@ The absolute maximum/minimum values of the function $f(x)$ in the closed interva
    - $\min (f(a), f(b), \text{all local minimum values of } f)$
    - least value of $f(x)$ in $[a, b]$.
 
-#### Working Rule to find maxima and minima:
+### Partial Derivatives
 
-Let $f(x)$ be the given function
-**Step 1:** Find $f'(x)$
-**Step 2:** Equate $f'(x)$ to zero to obtain the stationary points.
-**Step 3:** Find $f''(x)$ at each stationary point.
+In calculus, a **partial derivative** of a function of multiple variables is its derivative with respect to one of those variables, with the other variables held constant. This is different from an ordinary derivative, where the function depends on a single variable.
 
-- If $f''(x_0) > 0$ then $f(x)$ has a minimum at $x = x_0$
-- If $f''(x_0) < 0$ then $f(x)$ has a maximum at $x = x_0$
-- If $f''(x_0) = 0$ then $f(x)$ may (or) may not have extremum.
+Partial derivatives are crucial in multivariable calculus because they help us understand how a function changes as each of its variables changes. They are widely used in various fields such as physics, engineering, economics, and machine learning.
 
-In this case, check for maxima and minima using the changes in sign of $f(x)$ as given below.
+Let $f(x, y)$ be a function of two variables $x$ and $y$. The partial derivatives of $f$ with respect to $x$ and $y$ are denoted by $f_x$ and $f_y$, respectively, and are defined as:
 
-1. For $x < x_0$ if $f'(x) < 0$ and $x > x_0$ if $f'(x) > 0$ then $f(x_0)$ is a minimum value of $f(x)$.
-2. For $x < x_0$ if $f'(x) > 0$ and $x > x_0$ if $f'(x) < 0$ then $f(x_0)$ is a maximum value of $f(x)$.
-3. For $x < x_0$ and $x > x_0$ if $f'(x) > 0$ (or) $f'(x) < 0$ then $f(x_0)$ is not an extremum.
+$$
+ f_x = \frac{\partial f}{\partial x} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x, y) - f(x, y)}{\Delta x}
+$$
 
-### Maxima and minima for functions of two variables:
+$$
+ f_y = \frac{\partial f}{\partial y} = \lim_{\Delta y \to 0} \frac{f(x, y + \Delta y) - f(x, y)}{\Delta y}
+$$
 
-Let $z = f(x, y)$ be the function of two variables for which maxima or minima is to be obtained.
+In simple terms, $f_x$ measures the rate of change of $f$ with respect to $x$ while keeping $y$ constant, and $f_y$ measures the rate of change of $f$ with respect to $y$ while keeping $x$ constant.
 
-**Working Rule:**
+**Notation** <br>
 
-**Step 1:** Find $p, q, r, s$ and $t$
+- $f_x$ or $\frac{\partial f}{\partial x}$: Partial derivative with respect to $x$.
+- $f_y$ or $\frac{\partial f}{\partial y}$: Partial derivative with respect to $y$.
 
-**Step 2:** Equate $p$ and $q$ to zero for obtaining stationary points.
+**Example** <br>
 
-**Step 3:** Find $r, s$ and $t$ at each stationary point.
+Consider the function $f(x, y) = x^2y + 3xy + y^3$.
 
-1. If $rt - s^2 > 0$ and $r > 0$ then $f(x, y)$ has a minimum at that stationary point.
-2. If $rt - s^2 > 0$ and $r < 0$ then $f(x, y)$ has a maximum at that stationary point.
-3. If $rt - s^2 < 0$ then $f(x, y)$ has no extremum at that stationary point and such points are called saddle points.
-4. If $rt - s^2 = 0$ then the case is undecided.
+1. **Partial Derivative with Respect to $x$**:
+
+   $$
+    f_x = \frac{\partial}{\partial x} (x^2y + 3xy + y^3)
+   $$
+
+   $$
+    f_x = 2xy + 3y
+   $$
+
+2. **Partial Derivative with Respect to $y$**:
+   $$
+    f_y = \frac{\partial}{\partial y} (x^2y + 3xy + y^3)
+   $$
+   $$
+    f_y = x^2 + 3x + 3y^2
+   $$
+
+> Partial derivatives give us the slope of the tangent line to the curve obtained by intersecting the surface $z = f(x, y)$ with a plane parallel to the respective coordinate plane.
+
+#### Higher-Order Partial Derivatives
+
+Just like ordinary derivatives, we can take higher-order partial derivatives. For a function $f(x, y)$, the second-order partial derivatives are:
+
+- $f_{xx} = \frac{\partial^2 f}{\partial x^2}$: Second partial derivative with respect to $x$.
+- $f_{yy} = \frac{\partial^2 f}{\partial y^2}$: Second partial derivative with respect to $y$.
+- $f_{xy} = \frac{\partial^2 f}{\partial y \partial x}$ or $f_{yx} = \frac{\partial^2 f}{\partial x \partial y}$: Mixed partial derivatives.
+
+#### Clairaut's Theorem
+
+As mentioned earlier, for functions with continuous second-order partial derivatives, the mixed partial derivatives are equal:
+
+$$
+ f_{xy} = f_{yx}
+$$
+
+#### Applications
+
+Partial derivatives are used in numerous applications, including:
+
+1. **Gradient**: The gradient of a function $f(x, y)$ is a vector that points in the direction of the steepest ascent. It is denoted by $\nabla f$ and is given by:
+
+   $$
+    \nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right)
+   $$
+
+2. **Tangent Planes**: The equation of the tangent plane to the surface $z = f(x, y)$ at the point \((x_0, y_0, z_0)\) is:
+
+   $$
+    z - z_0 = f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)
+   $$
+
+3. **Optimization**: In optimization problems, partial derivatives are used to find local maxima, minima, and saddle points of functions with several variables.
+
+#### Example Problems
+
+1. **Find the Partial Derivatives**:
+   For the function $g(x, y) = \sin(x) \cos(y)$:
+
+   $$
+   g_x = \frac{\partial g}{\partial x} = \cos(x) \cos(y)
+   $$
+
+   $$
+   g_y = \frac{\partial g}{\partial y} = -\sin(x) \sin(y)
+   $$
+
+2. **Compute the Gradient**:
+   For $h(x, y) = x^2 + y^2$:
+   $$
+   \nabla h = \left( \frac{\partial h}{\partial x}, \frac{\partial h}{\partial y} \right) = (2x, 2y)
+   $$
+
+#### Visual Representation
+
+Let's visualize partial derivatives with a simple 3D surface. Suppose we have a surface $z = f(x, y)$, and we slice it with planes parallel to the $x$- and $y$-axes:
+
+- **Slice Parallel to $yz$-Plane**: Fix $x = x_0$. The curve is $z = f(x_0, y)$. The slope of this curve at $y = y_0$ is $f_y(x_0, y_0)$.
+- **Slice Parallel to $xz$-Plane**: Fix $y = y_0$. The curve is $z = f(x, y_0)$. The slope of this curve at $x = x_0$ is $f_x(x_0, y_0)$.
+
+In summary, partial derivatives help us understand how functions of multiple variables change with respect to each variable independently. They are the cornerstone of multivariable calculus.

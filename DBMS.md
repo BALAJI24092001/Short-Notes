@@ -216,6 +216,132 @@ $\{<x_1, x_2, ..., x_n> | P(x_1, x_2, ..., x_n)\}$
 
   <u>Note</u>: You have to mention the domain variables in the same order as given in the table.
 
+## Joins
+
+### Inner Join
+
+An inner join returns only the rows where there is a match in both tables. It discards rows that do not have matching values in both tables.
+
+**Relational Algebra Notation:**
+
+$$
+ R \bowtie S
+$$
+
+where $R$ and $S$ are two relations.
+
+For example, if we have two relations $R(A, B)$ and $S(B, C)$, an inner join on the attribute $B$ (common in both tables) will be:
+
+$$
+ R \bowtie S = \{ (a, b, c) \, | \, (a, b) \in R \text{ and } (b, c) \in S \}
+$$
+
+### Left Outer Join
+
+A left outer join returns all the rows from the left table (relation) and the matching rows from the right table. If there is no match, the result will contain NULL values for columns from the right table.
+
+**Relational Algebra Notation:**
+
+$$
+ R \ltimes S
+$$
+
+### Right Outer Join
+
+A right outer join returns all the rows from the right table and the matching rows from the left table. If there is no match, the result will contain NULL values for columns from the left table.
+
+**Relational Algebra Notation:**
+
+$$
+ R \rtimes S
+$$
+
+### Full Outer Join
+
+A full outer join returns all the rows when there is a match in either the left table or the right table. If there is no match, the result will contain NULL values for columns from the table that does not have a match.
+
+**Relational Algebra Notation:**
+
+$$
+ R\quad ⟗  \quad S
+$$
+
+### Cross Join (Cartesian Product)
+
+A cross join returns the Cartesian product of the two tables, meaning it combines each row of the first table with each row of the second table.
+
+**Relational Algebra Notation:**
+
+$$
+ R \times S
+$$
+
+For example, if relation $R$ has 3 rows and relation $S$ has 2 rows, the Cartesian product $R \times S$ will have $3 \times 2 = 6$ rows.
+
+### Theta Join
+
+A theta join allows us to join tables based on a condition that uses comparison operators other than equality (e.g., <, >, ≤, ≥, ≠).
+
+**Relational Algebra Notation:**
+
+$$
+ R \bowtie_\theta S
+$$
+
+where $\theta$ is a condition involving comparison operators.
+
+### Practical Examples
+
+Let's say we have two tables, `Students` and `Courses`:
+
+#### Students Table:
+
+| StudentID | Name  |
+| --------- | ----- |
+| 1         | Alice |
+| 2         | Bob   |
+| 3         | Carol |
+
+#### Courses Table:
+
+| CourseID | StudentID | CourseName |
+| -------- | --------- | ---------- |
+| 101      | 1         | Math       |
+| 102      | 2         | Science    |
+| 103      | 2         | History    |
+| 104      | 4         | Literature |
+
+- **Inner Join Example:** Retrieve students and their courses
+
+  $$
+
+    Students \bowtie_{Students.StudentID = Courses.StudentID} Courses
+  $$
+
+  Result:
+  | StudentID | Name | CourseID | CourseName |
+  |-----------|-------|----------|------------|
+  | 1 | Alice | 101 | Math |
+  | 2 | Bob | 102 | Science |
+  | 2 | Bob | 103 | History |
+
+- **Left Outer Join Example:** Retrieve all students and their courses (if any)
+
+  $$
+
+    Students \ltimes Courses
+  $$
+
+  Result:
+  | StudentID | Name | CourseID | CourseName |
+  |-----------|-------|----------|------------|
+  | 1 | Alice | 101 | Math |
+  | 2 | Bob | 102 | Science |
+  | 2 | Bob | 103 | History |
+  | 3 | Carol | NULL | NULL |
+
+These examples illustrate how joins in relational algebra help us retrieve and combine data from multiple tables based on specific conditions.
+
 ## Functional Dependency and Decomposition
 
 A functional dependency (FD) is a kind of integrity constraints that generalizes the concept of a key. Let $R$ be a relation schema and let $X$ and $Y$ be nonempty sets of attributes in $R$. We say that an instance $r$ of $R$ satisfies the FD $X \rightarrow Y$ . If the following holds for every pair of tuples $t1$ and $t2$ in $r$.

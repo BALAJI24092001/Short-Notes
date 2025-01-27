@@ -386,6 +386,10 @@ to use some additional rules while reasoning about $F^+$ :
 
 These additional rules are not essential; their soundness can be proved using Armstrong's Axioms.
 
+### Lossless and Lossy Decompositions
+
+<!-- TODO: Add notes from VG Lectures-->
+
 ## Normalization and Normal Forms
 
 Database design theory includes design standards called normal forms. The process of making data and tables match these standards is called normalizing data or data normalization. By normalizing data, we eliminate redundant information and organize the table to make it easier to manage the data and make future changes to the table and database structure. This process removes the insertion, deletion, and modification anomalies. In normalizing your data, we usually divide large tables into smaller, easierto- maintain tables. We can then use the technique of adding foreign keys to enable connections between the tables.
@@ -487,5 +491,22 @@ There are three types of anomalies that can arise in the database because of red
 - The performance degrades when normalizing the relations to higher normal forms, i.e., 4NF, 5NF.
 - It is very time-consuming and difficult to normalize relations of a higher degree.-
 - Careless decomposition may lead to a bad database design, leading to serious problems.
+
+# DATA WAREHOUSING
+
+<!-- TODO: Add notes after the exam from PW notes and VG Lectures-->
+
+# Keywords
+
+1. **Tautology** : In a database management system (DBMS), a tautology is a statement that is always true, regardless of the values of the individual statements that make it up
+2. **Topological Sort**
+
+# InDepth
+
+<!-- REQ:-->
+
+1.  TRC and DRC
+2.  Graph Traversals
+3.  Functional Dependencies, Decompositions and Normal Forms
 
 </span>

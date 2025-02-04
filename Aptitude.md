@@ -51,3 +51,21 @@ $$
 $$
 
 diverges as more terms are added.
+
+### Sum of `n` natural numbers
+
+$$
+\frac{n(n+1)}{2}
+$$
+
+### Sum of square of `n` natural numbers
+
+$$
+\frac{n(n+1)(2n+1)}{6}
+$$
+
+### Sum of cube of `n` natural numbers
+
+$$
+\left[ \frac{n(n+1))}{2} \right]^2
+$$

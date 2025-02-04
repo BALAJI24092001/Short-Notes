@@ -347,7 +347,7 @@ $$
 
 This is known as the Maclaurin series.
 
-### Standard Expansions
+### Standards Expansions
 
 1. $(1 - x)^{-1} = 1 + x + x^2 + x^3 + \cdots \quad \text{for } |x| < 1$
 

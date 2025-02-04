@@ -129,6 +129,10 @@ relation =N= Entity
    <img src = 'https://erikanacua.wordpress.com/wp-content/uploads/2013/02/image0021.png'>
 </center>
 
+   <!-- REQ: -->
+
+**[E-R Model to Relational Database](https://www.youtube.com/watch?v=Pe1PGnmbDh4&ab_channel=UnacademyComputerScience)**
+
 ## Relational Algebra
 
 Relational algebra refers to a procedural query language that takes relation instances as input and returns relation instances as output. It performs queries with the help of operators. It gives a step by step process to obtain the result of the query.
@@ -383,12 +387,9 @@ to use some additional rules while reasoning about $F^+$ :
 
 - Union: If $X — Y$and $X — Z$, then $X — YZ$.
 - Decomposition: If $X \rightarrow YZ$ then $x \rightarrow Y$ and $X \rightarrow Z$
+- Psuedo-transitivity rule: If $A \rightarrow B$ and $BC \rightarrow D$ then $AC \rightarrow D$
 
 These additional rules are not essential; their soundness can be proved using Armstrong's Axioms.
-
-### Lossless and Lossy Decompositions
-
-<!-- TODO: Add notes from VG Lectures-->
 
 ## Normalization and Normal Forms
 
@@ -491,6 +492,24 @@ There are three types of anomalies that can arise in the database because of red
 - The performance degrades when normalizing the relations to higher normal forms, i.e., 4NF, 5NF.
 - It is very time-consuming and difficult to normalize relations of a higher degree.-
 - Careless decomposition may lead to a bad database design, leading to serious problems.
+
+**Lossless and Lossy Decompositions**
+
+If a relation $R$ is decomposed into $R1$ and $R2$ and
+
+$$
+R1\cap R2 \neq = \phi
+$$
+
+then we say the decomposition is lossless.
+
+**Dependency Preserving**
+
+If a realation $R$ is decomposed into n relations $R1, R2, R3, ..., Rn$ then if the functional dependency set of R is exactly equal to union of broken relations, then we say the dependency is preserved.
+
+$$
+F.D\{R1 \cup R2 \cup R3 \cup ... \cup Rn \}= F.D\{R\}
+$$
 
 # DATA WAREHOUSING
 

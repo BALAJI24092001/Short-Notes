@@ -30,7 +30,7 @@ _**Schema**_: In any data model, it is important to distinguish between the desc
 
 ## Overview of DBMS
 
-1. _**Requirements Analysis:**_ <br>
+1. _**Requirements Analysis:**_<br>
    The very first step in designing a database application is to understand what data is to be stored in the database, what applications must be built on top of it, and what operations are most frequent and subject to performance requirements. In other words, we must find out what the users want from the database. This is usually an informal process that involves discussions with user groups, a study of the current operating environment and how it is expected to change, analysis of any available documentation on existing applications that are expected to be replaced or complemented by the database, and so on
 2. _**Conceptual Database Design:**_<br>
    The information gathered in the requirements analysis step is used to develop a highlevel description of the data to be stored in the database, along with the constraints that are known to hold over this data. This step is often carried out using the ER model, or a similar high-level data model.

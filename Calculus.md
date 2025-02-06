@@ -4,8 +4,6 @@
 
 ### Function of single variable
 
-A real valued function $y = f(x)$ of a real variable x is a mapping whose domain $S$ and codomain $R$ are sets of real numbers. The range of the function is the set ${y = f(x) : x \in R}$ which is a subset of $R$.
-
 A relation f from a set $A$ to a set $B$ is said to be a function if every element of set $A$ has one and only one image in set $B$. In other words, a function $f$ is a relation such that no two pairs in the relation have the same first element.
 
 The notation $f : X \rightarrow Y$ means that $f$ is a function from $X$ to $Y$ . $X$ is called the domain of $f$, and $Y$ is called the co-domain of $f$.
@@ -51,10 +49,10 @@ range of $f = \{y \in Y | y = f(x) \text{ for some } x ∈ X\}$
 
 - <u>**Polynomial Functions**</u> <br>
   Polynomial functions are algebraic functions of the form <br>
-  $f(x) = a_nx^n + a_{n−1}x_{n−1} + . . . + a_1x + a0$, where ai are constants, and n is a non-negative integer.<br>
+  $f(x) = a_nx^n + a_{n−1}x_{n−1} + . . . + a_1x + a_0$, where ai are constants, and n is a non-negative integer.<br>
   _**Example**_: $f(x) = 3x^3 − 2x^2 + 5x − 1$ is a polynomial function in `x` with degree 3.<br>
 
-      Note: A polynomial function of degree ’0’ is called a constant polynomial function (or) simply constant function.
+  > Note: A polynomial function of degree ’0’ is called a constant polynomial function (or) simply constant function.
 
 - <u>**Rational Functions**</u> <br>
   Rational functions are functions of the form $f(x) = \frac{p(x)}{q(x)}$ , where $p(x)$ and $q(x)$ are both
@@ -72,7 +70,7 @@ range of $f = \{y \in Y | y = f(x) \text{ for some } x ∈ X\}$
   Logarithmic functions are functions of the form $f(x) = logb(x)$, where $b$ is the base of the logarithm.<br>
   _**Example**_: $f(x) = log_{10}(x)$
 
-- <u>**Even and Odd Functions**</u><br>
+- <u>**Even Functions**</u><br>
   Even functions are symmetric about the y-axis, and odd functions are symmetric aboutthe origin. For even functions, $f(−x) = f(x)$, and for odd functions, $f(−x) = −f(x)$. <br>
   _**Example**_: Even Function: $f(x) = x^2$ (Symmetric about the y-axis)
 
@@ -81,7 +79,7 @@ range of $f = \{y \in Y | y = f(x) \text{ for some } x ∈ X\}$
 
 - <u>**Exponential Functions**</u><br>
   Exponential functions are functions of the form $f(x) = a^x$, where $a$ is a positive constant.
-  _**Example**_: $f(x) = 2x$
+  _**Example**_: $f(x) = 2^x$
 
 - <u>**Modulus Functions**</u><br>
   Modulus functions, often denoted as $f(x) = |x|$, return the absolute value of $x$, making it always non-negative.
@@ -109,6 +107,7 @@ range of $f = \{y \in Y | y = f(x) \text{ for some } x ∈ X\}$
   $$
 
 - If $f : A \rightarrow B$ and $g : B \rightarrow C$ are one-one, then $g \circ f : A \rightarrow C$ is also one-one.
+
 - If $f : A \rightarrow B$ and $g : B \rightarrow C$ are onto, then $g \circ f : A \rightarrow C$ is also onto.
 - Let $f : A \rightarrow B$ and $g : B \rightarrow C$ be the given functions such that $g \circ f$ is one-one. Then $f$ is one-one.
 - Let $f : A \rightarrow B$ and $g : B \rightarrow C$ be the given functions such that $g \circ f$ is onto. Then $g$ is onto.
@@ -139,7 +138,7 @@ $$
 Symbolically we write
 
 $$
-\lim\_{x \to a} f(x) = \ell
+\lim_{x \to a} f(x) = \ell
 $$
 
 $\textbf{Left Hand and Right Hand Limits}$
@@ -237,7 +236,7 @@ There are several basic rules that help us evaluate limits:
 
 6. $\quad \lim_{{x \to a}} \frac{x^n - a^n}{x - a} = na^{n-1}$
 
-7. $\quad \lim\_{{x \to a}} \left( \frac{a^x + b^x}{2} \right)^{\frac{1}{x}} = \sqrt{ab}$
+7. $\quad \lim_{{x \to a}} \left( \frac{a^x + b^x}{2} \right)^{\frac{1}{x}} = \sqrt{ab}$
 
 ### L'Hospital's Rule
 
@@ -273,7 +272,7 @@ If $f(x)$ is a polynomial function, then $\lim_{{x \to a}} f(x) = f(a)$.
    A function $f(x)$ is said to be continuous from the left (or) left continuous at $x = a$ if
 
    - $f(a)$ is defined
-   - $\lim\_{x \to a^{-}} f(x) = f(a)$
+   - $\lim_{x \to a^{-}} f(x) = f(a)$
 
 3. **Right continuous (or) continuity from the right at a point:** <br>
    A function $f(x)$ is said to be continuous from the right (or) right continuous at $x = a$ if
@@ -299,7 +298,7 @@ If $f(x)$ is a polynomial function, then $\lim_{{x \to a}} f(x) = f(a)$.
    - $cf$, $f \pm g$ and $f.g$ are continuous at $x = x_0$, where $c$ is any constant.
    - $\frac{f}{g}$ is continuous at $x = x_0$, if $g(x_0) \neq 0$
 5. If $f$ is continuous at $x = x_0$ and $g$ is continuous at $f(x_0)$ then the composite function $g(f(g))$ is continuous at $x = x_0$.
-6. If f is continuous at an interior point $c$ of a closed interval $[a, b]$ and $f(c) ̸= 0$, then there exists a neighbourhood of $c$, throughout which $f(x)$ has the same sign as $f(c)$.
+6. If f is continuous at an interior point $c$ of a closed interval $[a, b]$ and $f(c) \neq 0$, then there exists a neighbourhood of $c$, throughout which $f(x)$ has the same sign as $f(c)$.
 7. If $f$ is continuous in a closed interval $[a, b]$ then it is bounded there and attains its bounds at least once in $[a, b]$.
 8. If $f$ is continuous in a closed interval $[a, b]$, and if $f(a)$ and $f(b)$ are of opposite signs, then there exists at least one point $c \in [a, b]$ such that $f(c) = 0$.
 9. If $f$ is continuous in a closed interval $[a, b]$ and $f(a) \neq f(b)$ then it assumes every value between $f(a)$ and $f(b)$.
@@ -331,7 +330,7 @@ A function $f(x)$ is said to be derivable (or) differentiable on closed interval
 
 ## Taylor Series
 
-Let $f(x)$ be a function which is analytic at $x = a$. Then we can write $f(x)$ as the following power series, called the Taylor series of $f(x)$ at $x = a$:
+Let $f(x)$ be a function which is differentiable at $x = a$. Then we can write $f(x)$ as the following power series, called the Taylor series of $f(x)$ at $x = a$:
 
 $$
 f(x) = f(a) + f'(a) \frac{(x - a)}{1!} + f''(a) \frac{(x - a)^2}{2!} + f'''(a) \frac{(x - a)^3}{3!} + \cdots
@@ -350,41 +349,23 @@ This is known as the Maclaurin series.
 ### Standards Expansions
 
 1. $(1 - x)^{-1} = 1 + x + x^2 + x^3 + \cdots \quad \text{for } |x| < 1$
-
 2. $(1 + x)^{-1} = 1 - x + x^2 - x^3 + \cdots \quad \text{for } |x| < 1$
-
 3. $(1 - x)^{-2} = 1 + 2x + 3x^2 + 4x^3 + \cdots \quad \text{for } |x| < 1$
-
 4. $(1 + x)^{-2} = 1 - 2x + 3x^2 - 4x^3 + \cdots \quad \text{for } |x| < 1$
-
 5. $(1 - x)^{-3} = 1 + 3x + 6x^2 + 10x^3 + \cdots \quad \text{for } |x| < 1$
-
 6. $\quad (1 + x)^{-3} = 1 - 3x + 6x^2 - 10x^3 + \ldots \quad [-1 < x < 1]$
-
 7. $\quad (1 + x)^n = 1 + nx + \frac{n(n-1)}{2!}x^2 + \frac{n(n-1)(n-2)}{3!}x^3 + \ldots \quad [-1 < x < 1]$
-
 8. $\quad (1 - x)^{-n} = 1 + nx + \frac{n(n+1)}{2!}x^2 + \frac{n(n+1)(n+2)}{3!}x^3 + \ldots \quad [-1 < x < 1]$
-
 9. $\quad e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots \quad [-\infty < x < \infty]$
-
 10. $\quad e^{-x} = 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \ldots \quad [-\infty < x < \infty]$
-
 11. $\quad \sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \ldots \quad [-\infty < x < \infty]$
-
 12. $\quad \sinh x = x + \frac{x^3}{3!} + \frac{x^5}{5!} + \frac{x^7}{7!} + \ldots \quad [-\infty < x < \infty]$
-
 13. $\quad \sin^{-1} x = x + \frac{1}{2} \frac{x^3}{3} + \frac{1 \cdot 3}{2 \cdot 4} \frac{x^5}{5} + \frac{1 \cdot 3 \cdot 5}{2 \cdot 4 \cdot 6} \frac{x^7}{7} + \ldots \quad [-1 < x < 1]$
-
 14. $\quad \cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \ldots \quad [-\infty < x < \infty]$
-
 15. $\quad \cosh x = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \ldots \quad [-\infty < x < \infty]$
-
 16. $\quad \cos^{-1} x = \frac{\pi}{2} - \sin^{-1} x = \frac{\pi}{2} - \left( x + \frac{1}{2} \frac{x^3}{3} + \frac{1 \cdot 3}{2 \cdot 4} \frac{x^5}{5} + \ldots \right) \quad [-1 < x < 1]$
-
 17. $\quad \tan x = x + \frac{x^3}{3} + \frac{2x^5}{15} + \ldots \quad \left[ -\frac{\pi}{2} < x < \frac{\pi}{2} \right]$
-
 18. $\quad \tanh x = x - \frac{x^3}{3} + \frac{2x^5}{15} - \ldots \quad \left[ -\frac{\pi}{2} < x < \frac{\pi}{2} \right]$
-
 19. $$
         \quad \tan^{-1} x =
             \begin{cases}
@@ -394,11 +375,8 @@ This is known as the Maclaurin series.
             \end{cases}
             \quad \left[-1 < x < 1\right]
     $$
-
 20. $\quad \cot x = \frac{1}{x} - \frac{x}{3} - \frac{x^3}{45} + \ldots \quad \left[0 < x < \pi\right]$
-
 21. $\quad \coth x = \frac{1}{x} + \frac{x}{3} - \frac{x^3}{45} + \ldots \quad \left[0 < |x| < \pi\right]$
-
 22. $$
     \quad \cot^{-1} x = \frac{\pi}{2} - \tan^{-1} x =
         \begin{cases}
@@ -408,11 +386,8 @@ This is known as the Maclaurin series.
         \end{cases}
         \quad \left[-1 < x < 1\right]
     $$
-
 23. $\quad \sec x = 1 + \frac{x^2}{2} + \frac{5x^4}{24} + \ldots \quad \left[-\frac{\pi}{2} < x < \frac{\pi}{2}\right]$
-
 24. $\quad \csc x = \frac{1}{x} + \frac{x}{6} + \frac{7x^3}{360} + \ldots \quad \left[0 < x < \pi\right]$
-
 25. $\quad \ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \ldots \quad \left[-1 < x < 1\right]$
 
 ## DIFFERENTIAL CALCULUS
@@ -442,8 +417,10 @@ $$
 - **Constant Rule**:
 
   $$
-  \frac{d}{dx} [c] = 0 \text{  , where $c$ is a constant.}
+  \frac{d}{dx} c = 0
   $$
+
+  where c is a constant.
 
 - **Sum Rule**:
 
@@ -646,7 +623,7 @@ Logarithmic differentiation is a technique used in calculus to differentiate fun
    - $\log(a^b) = b \log(a)$
 
 2. **Steps for Logarithmic Differentiation**:
-   - **Step 1**: Take the natural logarithm (\(\ln\)) of both sides of the function $y = f(x)$. This step transforms the function into a form that is easier to differentiate.
+   - **Step 1**: Take the natural logarithm $\ln$ of both sides of the function $y = f(x)$. This step transforms the function into a form that is easier to differentiate.
    - **Step 2**: Use the properties of logarithms to simplify the expression.
    - **Step 3**: Differentiate both sides of the equation with respect to $x$. Remember to apply the chain rule when differentiating the logarithm of $y$ (since $y$ is a function of $x$).
    - **Step 4**: Solve for $\frac{dy}{dx}$ by isolating it on one side of the equation.
@@ -754,7 +731,7 @@ A function $f(x)$ is said to have a minimum at $x = c$ if there exists $\delta >
 The values of $x$ for which $f(x) = 0$ are called stationary points or turning points.
 
 **Stationary values** <br>
-A function $f(x)$ is said to be stationary at $x = a$ if $f′(a) = 0$ and $f(a)$ is a stationary value.
+A function $f(x)$ is said to be stationary at $x = a$ if $f^′(a) = 0$ and $f(a)$ is a stationary value.
 
 **Extreme point** <br>
 The point at which the function has a maximum or a minimum is called an extreme point.
@@ -762,7 +739,7 @@ The point at which the function has a maximum or a minimum is called an extreme 
 **Extreme values** <br>
 The values of the function at extreme points are called extreme values (Extrema).
 
-**Point of inflection:**
+**Point of inflection** <br>
 The point at which a curve crosses its tangents is called the point of inflection.
 The function $f(x)$ has neither maximum nor minimum at the point of inflection.
 
@@ -951,7 +928,7 @@ Partial derivatives are used in numerous applications, including:
     \nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right)
    $$
 
-2. **Tangent Planes**: The equation of the tangent plane to the surface $z = f(x, y)$ at the point \((x_0, y_0, z_0)\) is:
+2. **Tangent Planes**: The equation of the tangent plane to the surface $z = f(x, y)$ at the point $(x_0, y_0, z_0)$ is:
 
    $$
     z - z_0 = f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)

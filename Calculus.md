@@ -121,6 +121,8 @@ range of $f = \{y \in Y | y = f(x) \text{ for some } x ∈ X\}$
 
 ## Limits
 
+> Limits describe how a function behaves near a point, instead of at that point. This simple yet powerful idea is the basis of all of calculus.
+
 In calculus, the concept of a limit is fundamental to understanding the behavior of functions as they approach specific points. A limit represents the value that a function approaches as its input (independent variable) gets arbitrarily close to a certain value. We denote the limit of a function f(x) as x approaches a limit point c as follows:
 
 $$
